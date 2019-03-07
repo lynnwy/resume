@@ -1,11 +1,35 @@
 @import url(./b.css);
 
+
+body{
+    background:Black;
+    color:white;
+    margin:0;
+
+}
 /* 消除浮动bug */
 .clearfix::after{
     content: '';
     display: block;
     clear:both;
 }
+
+a{
+    color: inherit;  /* 继承颜色 */
+    text-decoration: none;
+}
+
+.topNavBar{
+   
+    padding: 20px 16px 20px 16px; /* 上右下左的顺序 */
+}
+
+.topNavBar > nav{
+    padding-top: 5px;
+    padding-bottom: 2px;
+
+}
+
  /* 只有在topnacbar是nav的父元素，nav是ul的父元素情况下才能使用 */
 .topNavBar>nav>ul{
    list-style:none; margin: 0; padding:0; 
@@ -30,9 +54,25 @@
     padding-top: 5px;
     padding-bottom: 5px;
     display: block;
+    border-top: 3px solid transparent;
 }
 
 /* hover：当鼠标悬停 */
 .topNavBar>nav>ul>li>a:hover{
     border-bottom: 3px solid #e06567;
+}
+
+.topNavBar .logo {
+    font-size: 24px;
+    font-family: "Arial Black";
+    padding-top: 3px;
+    padding-bottom: 4px;
+}
+.topNavBar .logo .rs{
+    margin-right: 4px;
+    color:#E6686A;
+}
+
+.topNavBar .logo .card{
+    color:#9A9DA2;
 }
