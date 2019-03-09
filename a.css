@@ -2,8 +2,8 @@
 
 
 body{
-    background:Black;
-    color:white;
+    background: #EFEFEF;
+    color:black;
     margin:0;
 
 }
@@ -21,23 +21,31 @@ a{
 
 .topNavBar{
    
-    padding: 20px 16px 20px 16px; /* 上右下左的顺序 */
+    padding: 20px 0 20px 0; /* 上右下左的顺序 */
+    position: fixed;    /* 脱离文档流 */
+    top: 0;
+    left: 0;
+    width: 100%;
 }
 
-.topNavBar > nav{
+.topNavBar-inner{
+    padding: 0 16px;
+}
+
+.topNavBar  nav{
     padding-top: 5px;
     padding-bottom: 2px;
 
 }
 
  /* 只有在topnacbar是nav的父元素，nav是ul的父元素情况下才能使用 */
-.topNavBar>nav>ul{
+.topNavBar nav>ul{
    list-style:none; margin: 0; padding:0; 
     /* 去掉小圆点用list-style，去掉导航栏前的默认空白用margin和padding */
 }
 
 
-.topNavBar>nav>ul>li{
+.topNavBar nav>ul>li{
     float:left;            /* 将li代码简化 */
     margin-left: 17px;    /* 导航栏每个导航的间隔 */
     margin-right: 17px;
@@ -45,7 +53,7 @@ a{
 }
 
 /* 改变页面默认字体大小（a标签） */
-.topNavBar>nav>ul>li>a{
+.topNavBar nav>ul>li>a{
     border-bottom: 3px solid transparent ; /* 加一个透明边框留空 */ 
     font-size: 12px; 
     color: #b7b7b7;
@@ -58,7 +66,7 @@ a{
 }
 
 /* hover：当鼠标悬停 */
-.topNavBar>nav>ul>li>a:hover{
+.topNavBar nav>ul>li>a:hover{
     border-bottom: 3px solid #e06567;
 }
 
@@ -75,4 +83,23 @@ a{
 
 .topNavBar .logo .card{
     color:#9A9DA2;
+}
+
+.banner{
+    height: 515px;
+    background-size: cover;
+
+}
+
+.banner .mask{
+    height: 515px;
+    background-color: rgba(0,0,0,0.4);
+}
+
+.userCard{
+    border: 1px solid red;
+    max-width: 940px;   /* 最大不超过940px宽度 */
+    margin-left: auto;       /* 水平居中 */
+    margin-right: auto;
+    background-color: #EFFFFF;
 }
