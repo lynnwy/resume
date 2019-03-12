@@ -102,4 +102,44 @@ a{
     margin-left: auto;       /* 水平居中 */
     margin-right: auto;
     background-color: #EFFFFF;
+    padding: 50px;
+}
+
+.userCard .welcome{
+    background: #E6686A ;
+    color:white;
+    display: inline-block;
+    /*height: 29px;
+    width: 79px;
+    line-height: 29px;
+    text-align: center;*/
+    padding: 4px 16px;
+    line-height: 22px;
+    position: relative;
+}
+
+.userCard .welcome .triangle{
+    border:10px solid transparent;
+    width:0px;
+    height:0px;
+    border-top-color:transparent;
+    border-right-color:transparent;
+    border-left-color:#E6686A;
+    border-top-width:0px;
+    display: block;
+    position: absolute;
+    top:100%;
+    left:4px;
+}
+
+
+.userCard .picture{
+    float:left;
+}
+.userCard .text{
+    float:left;
+    margin-left:65px; 
+}
+.userCard .pictureAndText{
+    padding: 50px;
 }
