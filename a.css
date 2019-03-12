@@ -19,6 +19,17 @@ a{
     text-decoration: none;
 }
 
+* {
+   margin:0 ;
+   padding: 0;
+}
+
+hr{
+    height: 0;
+    border: none;
+    border-top: 1px solid #DEDEDE
+}
+
 .topNavBar{
    
     padding: 20px 0 20px 0; /* 上右下左的顺序 */
@@ -116,6 +127,7 @@ a{
     padding: 4px 16px;
     line-height: 22px;
     position: relative;
+    margin-bottom: 10px;
 }
 
 .userCard .welcome .triangle{
@@ -139,7 +151,37 @@ a{
 .userCard .text{
     float:left;
     margin-left:65px; 
+    width:470px;
+}
+
+.userCard .text h1{
+    margin-top: 18px;
+}
+.userCard .text hr{
+    margin: 20px 0;
 }
 .userCard .pictureAndText{
     padding: 50px;
+}
+
+
+.userCard dl dt,
+.userCard dl dd{
+    padding: 5px 0;
+}
+.userCard dl dd{
+    float: left;
+    width:70%;
+    color:#9da0a7;
+}
+.userCard dl dt{
+    float: left;
+    width:30%;
+    font-weight: bold;
+}
+
+
+.userCard > footer.media{
+    background: #E6686A
+
 }
