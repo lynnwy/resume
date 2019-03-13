@@ -108,7 +108,7 @@ hr{
 }
 
 .userCard{
-    border: 1px solid red;
+  
     max-width: 940px;   /* 最大不超过940px宽度 */
     margin-left: auto;       /* 水平居中 */
     margin-right: auto;
@@ -182,6 +182,27 @@ hr{
 
 
 .userCard > footer.media{
-    background: #E6686A
+    background: #E6686A;
+    text-align: center;
 
+}
+
+.userCard svg{
+    width: 30px;
+    height: 30px;
+    fill:white;
+    vertical-align: top;
+}
+.userCard > footer.media > a{
+ 
+    display: inline-block;
+    border-radius: 50%;
+    padding: 5px 0;
+    width: 40px;
+    line-height: 30px;
+    margin:16px 16px;
+
+}
+.userCard > footer.media > a:hover{
+    background: #cf5d5f;
 }
