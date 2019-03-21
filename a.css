@@ -220,7 +220,7 @@ body >main .downloadResume{
     border:1px solid #CDCFD1;
     display: inline-block;
     background: #EFEFEF;
-    border-radius: 2px;
+    border-radius: 2px; /*圆角*/
     color:#3d4451;
     font-weight: bold;
     margin:32px 0;
