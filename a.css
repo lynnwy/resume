@@ -245,19 +245,23 @@ box-shadow: 0px 4px 13px 0px rgba(0,0,0,0.2);
     font-size:18px;
 }
 
-section.skills{
+section.skills,
+section.portfolio{
     max-width:940px;   /* 最大不超过940px宽度 */
     margin-left: auto;       /* 水平居中 */
     margin-right: auto;
     margin-top: 60px;
 }
-section.skills >h2{
+section.skills >h2,
+section.portfolio >h2{
     text-align: center;
     color:#3d4451;
     font-size: 34px;
     line-height: 1.2;
     font-weight: 600;
 }
+
+
 section.skills h3{
     font-size: 14px;
     line-height: 1.1;
@@ -293,5 +297,62 @@ section.skills .progressBar >.progress{
     width:70%;
     border-radius: 2px;
 }
+section.portfolio{
+    text-align: center;
+    margin-bottom: 100px;
+}
+section.portfolio >nav{
+    margin-top: 30px;
+    display: inline-block;
+    vertical-align: top;
+}
+section.portfolio >nav >ol{
+    
+    display: inline-block;
+    vertical-align: top;
+}
+
+section.portfolio >nav >ol >li{
+    float:left;
+    margin-left: 40px;
+    cursor: pointer;
+}
+section.portfolio >nav >ol >li:first-child{
+    margin-left: 0;
+}
+
+section.portfolio .bar{
+ 
+    height:5px;
+    background: white;
+    margin-top: 5px;
+    margin-bottom: 50px;
+    border-radius: 2px;
+}
+section.portfolio >nav .barInner{
+    height:100%;
+    background: #e6686a;
+    border-radius: 2px;
+    transition: all 0.3s;
+}
+section.portfolio >nav .bar.state-1 .barInner{
+    margin-left: 0;
+    width:60px;
+}
+section.portfolio >nav .bar.state-2 .barInner{
+    margin-left: 60px;
+    width:70px;
+}
+section.portfolio >nav .bar.state-3 .barInner{
+    margin-left: 130px;
+    width:110px;
+}
+section.portfolio .works{
+    position: relative;
+    /*border:1px solid red; 无高度 因为绝对定位的元素不在文档流里*/
+}
+section.portfolio .works > .big,
+section.portfolio .works > .small{
+    position: absolute;
 
 }
