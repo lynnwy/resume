@@ -20,7 +20,7 @@
       position: fixed;
       top:0; left: 0; width:100%;height:100%;
       background: grey;
-      z-index: 1;
+      z-index: 2;
       justify-content: center;
       align-items:center;
       
@@ -44,8 +44,20 @@
           <ul  class="clearfix">
             <li ><a href="#">关于</a></li>
             <li ><a href="#">技能</a></li>
-            <li ><a href="#">作品</a></li>
-            <li ><a href="#">博客</a></li>
+            <li class="menuTrigger"><a  href="#">作品</a>
+            <ul class="subMenu">
+              <li>作品1</li>
+              <li>作品2</li>
+              <li>作品3</li>
+            </ul>
+            </li>
+            <li class="menuTrigger"><a  href="#">博客</a>
+              <ul class="subMenu">
+                <li>博客1</li>
+                <li>博客2</li>
+                <li>博客3</li>
+              </ul>
+            </li>
             <li ><a href="#">日历</a></li>
             <li ><a href="#">联系方式</a></li>
             <li ><a href="#">其他</a></li>
@@ -213,6 +225,20 @@
        }else{
          topNavBar.classList.remove('sticky')
        }
+     }
+
+     let liTags = document.getElementsByClassName('menuTrigger')
+     console.log(liTags)
+     for(let i=0;i<liTags.length;i++){
+       liTags[i].onmouseenter=function(x){
+         x.currentTarget.classList.add('active')
+  
+       
+       }
+       liTags[i].onmouseleave=function(x){
+        x.currentTarget.classList.remove('active')
+       }
+       
      }
     </script>
 </body>
