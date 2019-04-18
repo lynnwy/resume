@@ -35,6 +35,27 @@ ul,ol{
 h1,h2,h3,h4,h5,h6{
     font-weight: normal;
 }
+
+[data-x].offset{
+    transform: translateY(200px);
+}
+[data-x]{
+    transform: translateY(0);
+    transition: all 0.5s;
+}
+
+
+/*[data-x].animate{
+        animation: slideup 0.5s;
+}
+
+@keyframes slideup{
+    0%{transform: translateY(-30px);}
+    100%{transform: translate(0);}
+}*/
+
+
+
 .topNavBar{
    
     padding: 20px 0 20px 0; /* 上右下左的顺序 */
@@ -113,7 +134,9 @@ h1,h2,h3,h4,h5,h6{
     border-top: 3px solid transparent;
     position: relative;
 }
-.topNavBar nav>ul>li.active>a::after{
+.topNavBar nav>ul>li.active>a::after,
+.topNavBar nav>ul>li.highlight>a::after
+{
     content:'';
     display: block;
     position: absolute;
@@ -126,6 +149,9 @@ h1,h2,h3,h4,h5,h6{
     border-radius: 20%;
  
  }
+
+ 
+ 
 /* hover：当鼠标悬停 */
 .topNavBar nav>ul>li>a:hover::after{
    content:'';
@@ -140,6 +166,7 @@ h1,h2,h3,h4,h5,h6{
    border-radius: 20%;
 
 }
+
 
 @keyframes menuSlide{
     0%{width:0%;}
@@ -349,12 +376,18 @@ section.skills .progressBar{
     background: #fae1e1;
     border-radius: 2px;
     margin: 4px 0 40px 0;
+    overflow: hidden;
 }
 section.skills .progressBar >.progress{
     background:#e6686a;
     height: 100%;
     width:70%;
     border-radius: 2px;
+    transform: translateX(0);
+    transition: all 1s;
+}
+section.skills.offset .progress{
+    transform: translateX(-300px);
 }
 section.portfolio{
     text-align: center;
